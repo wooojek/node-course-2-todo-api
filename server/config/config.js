@@ -1,11 +1,10 @@
-const NODE_ENV = process.env.NODE_ENV || 'development';
-let ENV = {};
-NODE_ENV !== 'production' ? ENV = require('../../.env') : null;
+const env = process.env.NODE_ENV || 'development';
 
-if (NODE_ENV === 'development') {
-    process.env.PORT = ENV.PORT;
-    process.env.MONGODB_URI = ENV.URL;
-} else if (NODE_ENV === 'test') {
-    process.env.PORT = ENV.PORT;
-    process.env.MONGODB_URI = ENV.TEST_URL;
+if (env === 'development' || env === 'test') {
+    const config = require('./config.json');
+    const envConfig = config[env];
+
+    Object.keys(envConfig).forEach((key) => {
+       process.env[key] = envConfig[key];
+    });
 }
