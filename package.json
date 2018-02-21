@@ -15,19 +15,19 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.18.2",
     "crypto-js": "^3.1.9-1",
-    "express": "^4.14.0",
+    "express": "^4.16.2",
     "jsonwebtoken": "^8.1.1",
     "lodash": "^4.17.5",
-    "mongodb": "^2.2.5",
+    "mongodb": "^2.2.34",
     "mongoose": "^4.13.11",
-    "validator": "^9.4.0"
+    "validator": "^9.4.1"
   },
   "devDependencies": {
-    "expect": "^21.1.0",
-    "mocha": "^3.0.2",
-    "nodemon": "^1.10.2",
-    "supertest": "^2.0.0"
+    "expect": "^21.2.1",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.15.1",
+    "supertest": "^2.0.1"
   }
 }
